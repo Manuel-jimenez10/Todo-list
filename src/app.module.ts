@@ -7,6 +7,7 @@ import { Tags } from './Entities/tag.entity';
 import { TaskTag } from './Entities/task-tag.entity';
 import { ConfigModule } from '@nestjs/config';
 import { UsersController } from './Users/users.controller';
+import { UsersModule } from './Users/users.module';
 
 @Module({
   imports: [
@@ -23,7 +24,8 @@ import { UsersController } from './Users/users.controller';
       entities: [ Lists, Users, Tasks, Tags, TaskTag ],
       synchronize: true,
       //dropSchema: true
-    })
+    }),
+    UsersModule
   ],
   controllers: [UsersController],
   providers: [],

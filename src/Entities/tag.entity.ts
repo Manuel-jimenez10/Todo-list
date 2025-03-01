@@ -8,7 +8,9 @@ export enum TagType {
   WORK = 'Trabajo',
   URGENT = 'Urgente',
   IMPORTANT = 'Importante',
-  TODO = 'Por Hacer'
+  TODO = 'Por Hacer',
+  UNIVERSITY = 'Universidad',
+  COMPLETE = 'Completado'
 }
 
 @Entity({
