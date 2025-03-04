@@ -41,6 +41,10 @@ export class UsersService {
     await this.usersRepository.update(id, user);
   }
 
-  
+  async getUserById(id: UUID){
+   const user = await this.usersRepository.findOne({where: {id}})
+   if(!user) throw new NotFoundException('usuario no encontrado')
+   return user
+  }
 
 }

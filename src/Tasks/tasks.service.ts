@@ -8,7 +8,7 @@ import { Repository } from 'typeorm';
 export class TasksService {
     constructor(@InjectRepository(Tasks) private tasksRepository: Repository<Tasks>) {}
 
-    async addUser(user: Users){
+    async createTask(){
     
     }
 

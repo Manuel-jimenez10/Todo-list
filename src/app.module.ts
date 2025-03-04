@@ -6,8 +6,8 @@ import { Tasks } from './Entities/task.entity';
 import { Tags } from './Entities/tag.entity';
 import { TaskTag } from './Entities/task-tag.entity';
 import { ConfigModule } from '@nestjs/config';
-import { UsersController } from './Users/users.controller';
 import { UsersModule } from './Users/users.module';
+import { ListsModule } from './Lists/lists.module';
 
 @Module({
   imports: [
@@ -25,9 +25,10 @@ import { UsersModule } from './Users/users.module';
       synchronize: true,
       //dropSchema: true
     }),
-    UsersModule
+    UsersModule,
+    ListsModule
   ],
-  controllers: [UsersController],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}
